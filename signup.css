@@ -7,3 +7,7 @@
 .modal-header {
     border: none;
 }
+
+main.container {
+    max-width: 800px;
+}

@@ -1,7 +1,5 @@
 // I provided this solution with the assumption that the UserHelper library is imported and avaliable
 
-import { mockAPI } from "./mockApi";
-
 const form = document.forms[0];
 
 form.addEventListener("submit", async (e) => {
@@ -45,10 +43,8 @@ form.addEventListener("submit", async (e) => {
     // Call mockApi function
     const response = mockAPI(userData);
 
-    const notificationModal = new bootstrap.Modal("#notification", {
-        keyboard: false,
-    });
-    const modalH1 = (document.querySelector(".modal-title").textContent = response.message);
+    const notificationModal = new bootstrap.Modal("#notification");
+    const modalH1 = document.querySelector(".modal-title");
 
     // Display the mockAPI response in frontend modal
     if (response.result === false) {
